@@ -10,19 +10,21 @@
   <body>
     
     <div class="jumbotron text-center bg-primary" style="color:white; font-weight: bold; font-size:24px;">Konya ŞH Acil Tıp Kan Gazı Hesaplama Aracı</div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="">
          <div class="card">
-          <div class="card-header bg-warning">Değerleri Giriniz</div>
+          <div class="card-header bg-warning" style="font-weight:bold">Değerleri Giriniz</div>
           <div class="card-body">
 
-            <div class="alert alert-danger" role="alert">
-  <b>UYARI 1:</b> Lütfen pH, PaO<sub>2</sub>, PaCO<sub>2</sub> ve HCO<sub>3</sub> değerlerini ondalık olarak girerken arada <b>virgül değil nokta</b> kullanınız. <br><b>UYARI 2:</b> Nümerik dışı değerlerde (harf gibi) hesaplama aracı çalışmayacaktır.
-</div>
+            <div class="alert alert-danger" role="alert" style="text-align: justify">
+  <b>UYARI 1:</b> Lütfen pH, PaO<sub>2</sub>, PaCO<sub>2</sub> ve HCO<sub>3</sub> değerlerini ondalık olarak girerken arada <b>virgül değil nokta</b> kullanınız. <br><hr>
+  <b>UYARI 2:</b> Nümerik dışı değerlerde (harf gibi) hesaplama aracı çalışmayacaktır.<br><hr>
+  <b>UYARI 3:</b> Hesaplamalar yanılabilir, hekim önerisi yerine geçmez. Lütfen yorumun konfirmasyonunu yapınız.
+</div><hr>
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="hastaYasi_">Hasta yaşı</span>
+    <span class="input-group-text bg-warning" style="color:black" id="hastaYasi_">Hasta yaşı</span>
   </div>
   <input type="text" id="hastaYasi" class="form-control" placeholder="Hasta yaşını giriniz." aria-label="Username" aria-describedby="basic-addon1">
 </div>
@@ -31,37 +33,37 @@
 
             <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="hastaPh_">pH</span>
+    <span class="input-group-text bg-warning" style="color:black" id="hastaPh_">pH</span>
   </div>
   <input type="text" id="hastaPh" class="form-control" placeholder="pH'ı giriniz." aria-label="Username" aria-describedby="basic-addon1">
 </div>
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">PaO<sub>2</sub></span>
+                  <span class="input-group-text bg-warning" style="color:black">PaO<sub>2</sub></span>
                 </div>
                 <input type="text" id="pao2Degeri" class="form-control" aria-label="Amount (to the nearest dollar)"  placeholder="PaO2 değerini giriniz.">
                 <div class="input-group-append">
-                  <span class="input-group-text">mmHg</span>
+                  <span class="input-group-text bg-warning" style="color:black">mmHg</span>
              </div>
              </div>
 
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">PaCO<sub>2</sub></span>
+                  <span class="input-group-text bg-warning" style="color:black">PaCO<sub>2</sub></span>
                 </div>
                 <input type="text" id="paco2Degeri" class="form-control" aria-label="Amount (to the nearest dollar)"  placeholder="PaCO2 değerini giriniz.">
                 <div class="input-group-append">
-                  <span class="input-group-text">mmHg</span>
+                  <span class="input-group-text bg-warning" style="color:black">mmHg</span>
              </div>
              </div>
 
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">HCO<sub>3</sub></span>
+                  <span class="input-group-text bg-warning" style="color:black">HCO<sub>3</sub></span>
                 </div>
                 <input type="text" id="hco3Degeri" class="form-control" aria-label="Amount (to the nearest dollar)"  placeholder="HCO3 değerini giriniz.">
                 <div class="input-group-append">
-                  <span class="input-group-text">mmHg</span>
+                  <span class="input-group-text bg-warning" style="color:black">mmHg</span>
              </div>
              </div>
 
@@ -69,84 +71,85 @@
 
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Na<sup>+</sup></span>
+                  <span class="input-group-text bg-warning" style="color:black">Na<sup>+</sup></span>
                 </div>
                 <input type="text" id="naDegeri" class="form-control" aria-label="Amount (to the nearest dollar)"  placeholder="Sodyum değerini giriniz.">
                 <div class="input-group-append">
-                  <span class="input-group-text">mEq/L</span>
+                  <span class="input-group-text bg-warning" style="color:black">mEq/L</span>
              </div>
              </div>
 
              <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Cl<sup>-</sup></span>
+                  <span class="input-group-text bg-warning" style="color:black">Cl<sup>-</sup></span>
                 </div>
                 <input type="text" id="clDegeri" class="form-control" aria-label="Amount (to the nearest dollar)"  placeholder="Klor değerini giriniz.">
                 <div class="input-group-append">
-                  <span class="input-group-text">mEq/L</span>
+                  <span class="input-group-text bg-warning" style="color:black">mEq/L</span>
              </div>
              </div>
-             
-             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="aaHesap(); aaYasaGore(); phYorumu(); kuralIkiYorumu(); kuralUcYorumu1(); beklenenPaco2(); beklenenHco3(); agHesapla();">HESAPLA</button>
+             <hr>
+             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="aaHesap(); aaYasaGore(); phYorumu(); kuralIkiYorumu(); kuralUcYorumu1(); beklenenPaco2(); beklenenHco3(); agHesapla();tutarlilikKontrolu();">HESAPLA</button>
 
 </div>
           </div>
-        </div>
+        </div><hr>
         <div class="card">
-          <div class="card-header bg-warning">Tutarlılık Kontrolü</div>
+          <div class="card-header bg-warning"style="font-weight:bold">Tutarlılık Kontrolü</div>
           <div class="card-body">
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1"">Tutarlılık yorumu:</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1"">Tutarlılık yorumu:</span>
   </div>
   <input type="text"
-  id="tutarlilikYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
+  id="tutarlilikYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly style="color: red;">
 </div>
 
 
           </div>
-        </div>
+        </div><hr>
          <div class="card">
-          <div class="card-header bg-warning">Arterio-alveoler Gradient Hesabı</div>
+          <div class="card-header bg-warning"style="font-weight:bold">Arterio-alveoler Gradient Hesabı</div>
           <div class="card-body">
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="hesaplananAa_">Hesaplanan Aa Gradient</span>
+    <span class="input-group-text bg-warning" style="color:black" id="hesaplananAa_">Hesaplanan Aa Gradient</span>
   </div>
-  <input type="text" id="hesaplananAa" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" id="hesaplananAa" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="yasaGoreAa_">Yaşa göre Aa Gradient</span>
+    <span class="input-group-text bg-warning" style="color:black" id="yasaGoreAa_">Yaşa göre Aa Gradient</span>
   </div>
-  <input type="text" id="yasaGoreAa" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" id="yasaGoreAa" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
  </div>
+ </div><hr>
         <div class="card">
-          <div class="card-header bg-warning">Basamaklı Kan Gazı Yorumu</div>
+          <div class="card-header bg-warning"style="font-weight:bold">Kan Gazı Yorumu</div>
           <div class="card-body">
 
            
 
  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="phYorumu_">pH yorumu:</span>
+    <span class="input-group-text bg-warning" style="color:black" id="phYorumu_">pH yorumu:</span>
   </div>
-  <input type="text" id="phYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" id="phYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
  
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Primer olay yorumu:</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1">Primer olay yorumu:</span>
   </div>
   <input type="text" 
-  id="kuralIkiYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  id="kuralIkiYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
 
@@ -154,74 +157,74 @@
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Mikst bozukluk yorumu:</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1">Mikst bozukluk yorumu:</span>
   </div>
   <input type="text"
-  id="kuralUcYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  id="kuralUcYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
 
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-primary" role="alert">
   Metabolik asidoz'da beklenen kompansasyon - beklenen PCO2 değeri
 </div>
 
 <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Beklenen PaCO<sub>2</sub>:</span>
+                  <span class="input-group-text bg-warning" style="color:black">Beklenen PaCO<sub>2</sub>:</span>
                 </div>
                 <input type="text"
-                id="beklenenPaco2_1" class="form-control" aria-label="Amount (to the nearest dollar)">
+                id="beklenenPaco2_1" class="form-control" aria-label="Amount (to the nearest dollar)" readonly>
                 <div class="input-group-append">
-                  <span class="input-group-text">±2 mmHg</span>
+                  <span class="input-group-text bg-warning" style="color:black">±2 mmHg</span>
              </div>
              </div>
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-primary" role="alert">
   Metabolik alkaloz'da beklenen kompansasyon - beklenen PCO2 değeri
 </div>
 
 <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Beklenen PaCO<sub>2</sub>:</span>
+                  <span class="input-group-text bg-warning" style="color:black">Beklenen PaCO<sub>2</sub>:</span>
                 </div>
                 <input type="text"
-                id="beklenenPaco2_2" class="form-control" aria-label="Amount (to the nearest dollar)">
+                id="beklenenPaco2_2" class="form-control" aria-label="Amount (to the nearest dollar)" readonly>
                 <div class="input-group-append">
-                  <span class="input-group-text">±2 mmHg</span>
+                  <span class="input-group-text bg-warning" style="color:black">±2 mmHg</span>
              </div>
              </div>
 
 
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-primary" role="alert">
   Respiratuvar asidoz'da beklenen kompansasyon - beklenen HCO3 değeri
 </div>
 
 <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Beklenen Delta HCO<sub>3</sub>:</span>
+                  <span class="input-group-text bg-warning" style="color:black">Beklenen Delta HCO<sub>3</sub>:</span>
                 </div>
                 <input type="text"
                 id="beklenenHco3_1" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <div class="input-group-append">
-                  <span class="input-group-text">mmHg</span>
+                <div class="input-group-append" readonly>
+                  <span class="input-group-text bg-warning" style="color:black">mmHg</span>
              </div>
              </div>
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-primary" role="alert">
   Respiratuvar alkaloz'da beklenen kompansasyon - beklenen HCO3 değeri
 </div>
 
 <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Beklenen Delta HCO<sub>3</sub>:</span>
+                  <span class="input-group-text bg-warning" style="color:black">Beklenen Delta HCO<sub>3</sub>:</span>
                 </div>
                 <input type="text" 
                 id="beklenenHco3_2"
-                class="form-control" aria-label="Amount (to the nearest dollar)">
+                class="form-control" aria-label="Amount (to the nearest dollar)" readonly>
                 <div class="input-group-append">
-                  <span class="input-group-text">mmHg</span>
+                  <span class="input-group-text bg-warning" style="color:black">mmHg</span>
              </div>
              </div>
 
@@ -236,34 +239,34 @@
 
  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">AG</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1">AG</span>
   </div>
-  <input type="text" id="agDegeri" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" id="agDegeri" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">AG yorumu:</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1">AG yorumu:</span>
   </div>
   <input type="text" 
-  id="agYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  id="agYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
 
  <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Delta-Delta Gap</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1">Delta-Delta Gap</span>
   </div>
   <input type="text" 
-  id="deltaDelta" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  id="deltaDelta" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Delta-Delta Gap yorumu:</span>
+    <span class="input-group-text bg-warning" style="color:black" id="basic-addon1">Delta-Delta Gap yorumu:</span>
   </div>
   <input type="text" 
-  id="deltaDeltaYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  id="deltaDeltaYorumu" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" readonly>
 </div>
 
 
@@ -271,7 +274,7 @@
 
 
 
-          </div>
+          </div><hr>
 
           <div class="alert alert-success text-center" role="alert">
   <a href="">Kaynak sunum</a> | Tasarım ve kodlama: Uzm.Dr.Yasin YILDIZ | © 2024 - Konya
@@ -412,7 +415,7 @@ function agHesapla() {
 
 }
 
-/*function tutarlilikKontrolu() {
+function tutarlilikKontrolu() {
   var hastaPhString = document.getElementById("hastaPh").value;
   var paco2Degeri = Number(document.getElementById("paco2Degeri").value);
   var hco3Degeri = Number(document.getElementById("hco3Degeri").value);
@@ -424,9 +427,9 @@ function agHesapla() {
   if (ikinciDenklem == ilkDenklem ) {
     document.getElementById("tutarlilikYorumu").value = "TUTARLI"
   } else {
-    document.getElementById("tutarlilikYorumu").value = "TUTARLI DEĞİL
+    document.getElementById("tutarlilikYorumu").value = "TUTARLI DEĞİL"
   }
-}*/
+}
 
 
     </script>
